@@ -1,10 +1,13 @@
 {
-  "name": "use-mask-input",
-  "version": "1.0.0",
+  "name": "@tt92618/use-mask-input",
+  "version": "1.0.2",
   "description": "Made with create-react-library",
   "author": "eduardoborges",
   "license": "MIT",
-  "repository": "https://github.com/eduardoborges/use-mask-input",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardoborges/use-mask-input.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -12,8 +15,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "build": "microbundle-crl --no-compress,cjs",
+    "start": "microbundle-crl watch --no-compress,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
@@ -63,9 +66,18 @@
     "dist"
   ],
   "dependencies": {
-    "inputmask": "^5.0.3"
+    "inputmask": "^5.0.3",
+    "@types/inputmask": "*"
   },
   "bundleDependencies": [
-    "inputmask"
-  ]
+    "inputmask",
+    "@types/inputmask"
+  ],
+  "bugs": {
+    "url": "https://github.com/eduardoborges/use-mask-input/issues"
+  },
+  "homepage": "https://github.com/eduardoborges/use-mask-input#readme",
+  "directories": {
+    "example": "example"
+  }
 }
